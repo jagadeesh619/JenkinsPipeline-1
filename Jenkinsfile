@@ -14,7 +14,7 @@ pipeline {
     stages{
         stage('Build'){
             steps{
-                echo "Building the code in ${params.ENVIRONMENT}"
+                echo "Building the code  in ${params.ENVIRONMENT}"
             }
         }
         stage('testing'){
