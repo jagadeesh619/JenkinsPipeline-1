@@ -3,6 +3,11 @@ pipeline {
     environment {
         app="HPPV"
     }
+    options {
+        // Timeout counter starts AFTER agent is allocated
+        timeout(time: 1, unit: 'SECONDS')
+        disableConcurrentBuilds()
+    }
     stages{
         stage('Build'){
             steps{
@@ -12,6 +17,8 @@ pipeline {
         stage('testing'){
             steps{
                 echo "Testing the code"
+                sleep 10
+                
             }
         }
         stage('deploy'){
