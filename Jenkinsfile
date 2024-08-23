@@ -24,7 +24,7 @@ pipeline {
         }
         stage('deploy'){
             when {
-                expression { ${params.ENVIRONMENT} == "DEV" }
+                expression { "${params.ENVIRONMENT}" == "DEV" }
             }
             input {
                 message "Should we continue?"
