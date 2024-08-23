@@ -19,7 +19,7 @@ pipeline {
         }
         stage('testing'){
             steps{
-                echo "Testing the code ${params.ENVIRONMENT}"                
+                echo "Testing the  code ${params.ENVIRONMENT}"                
             }
         }
         stage('deploy'){
