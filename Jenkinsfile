@@ -23,6 +23,10 @@ pipeline {
             }
         }
         stage('deploy'){
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+            }
             steps{
 
                 echo "Deployed the code in ${params.ENVIRONMENT} ${app} server"
