@@ -19,9 +19,7 @@ pipeline {
         }
         stage('testing'){
             steps{
-                echo "Testing the code ${params.ENVIRONMENT}"
-                sleep 10
-                
+                echo "Testing the code ${params.ENVIRONMENT}"                
             }
         }
         stage('deploy'){
